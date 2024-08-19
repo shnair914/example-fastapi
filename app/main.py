@@ -10,7 +10,7 @@ app = FastAPI()
 
 @app.get("/")
 def root():
-    return {"messag": "hello "}
+    return {"messag": "hello!!!!!!! "}
 
 origins = ["*"]
 app.add_middleware(
