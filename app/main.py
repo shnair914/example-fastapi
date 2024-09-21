@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 from .database import engine
 from . import models
 from .routers import post, user, auth
@@ -10,7 +10,7 @@ app = FastAPI()
 
 @app.get("/")
 def root():
-    return {"messag": "hello!!!!!!! "}
+    return {"message": "hello world"}
 
 origins = ["*"]
 app.add_middleware(

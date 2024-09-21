@@ -44,5 +44,5 @@ def verify_access_token(token: str, credentials_exception):
 def get_current_user(token: Annotated[str,Depends(oauth2_scheme)]):
     credentials_exception = HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail=f'Could not validate credentials', headers={"WWW-Authenticate": "Bearer"})
     return verify_access_token(token=token, credentials_exception=credentials_exception)
-
+ 
 
